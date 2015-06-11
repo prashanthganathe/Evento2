@@ -17,3 +17,14 @@ aldeed:collection2
 iron:router
 sacha:spin
 ian:accounts-ui-bootstrap-3
+aldeed:autoform
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker
+tsega:bootstrap3-datetimepicker@=3.1.3_3
+aldeed:autoform-bs-datetimepicker
+mrt:moment-timezone
+twbs:bootstrap
+dburles:google-maps
+
+lookback:logger
+nimble:restivus
