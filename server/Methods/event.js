@@ -1,12 +1,14 @@
 Meteor.methods({
-  addEvent: function(doc) {
-      debugger;
+  addEvent: function(doc) {     
             Logger.info('Object before Insert : ');
-            Logger.info(JSON.stringify(doc));
-          	
+            Logger.info('Method: ' +JSON.stringify(doc));          	
             check(doc, Event);
-            this.unblock();   
+           // Events.clean(doc);
+          //  this.unblock();   
             Events.insert(doc);
+
+            
+          
   }
 });
 

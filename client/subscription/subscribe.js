@@ -1,2 +1,4 @@
 Meteor.subscribe("events");
-Meteor.subscribe("markers");
+Meteor.subscribe("sessions");
+Meteor.subscribe("questions");
+Meteor.subscribe("contents");

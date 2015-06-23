@@ -8,10 +8,10 @@
         </div>
 </div>
 	  
-{{> map}}
+<!-- {{> map}} -->
  	
-    {{#autoForm  schema="Event"  id="eventForm"  type="method"  meteormethod="addEvent"}}
-		<div class="row white">	
+    {{#autoForm  collection="Events" id="eventForm"  type="insert"  }}
+		<div class="row white ">	
  			<fieldset>
 			<div class="col-md-3" >	
 				<div class="col-md-12" >	

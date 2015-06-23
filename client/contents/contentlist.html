@@ -1,0 +1,46 @@
+<template name="contentlist">
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Contents </h1><hr>			  
+        </div>
+</div>
+
+
+
+<div class="row centered">  
+<div class="pagina">
+	<div class="row white centered">					
+				 {{#each contentsbysessionid}} 
+						 {{> contentItem}}
+				 {{/each}} 
+	</div>
+</div>
+</div>	  
+</template>
+
+
+<template name="contentItem">  
+       			<div class="col-lg-12 centered">	
+                    <h3>{{title}}</h3>					
+					<p>{{description}}</p>				
+					
+					{{#if isjpeg fileextension }}					
+					   <a href={{path}}><img src="../img/jpg.jpg" width="40" height="40px" /></a>
+					{{/if }}
+					{{#if ispng fileextension }}					
+					   <a href={{path}}><img src="../img/png.jpg" width="40" height="40px" /></a>	
+					{{/if }}
+					{{#if ispdf fileextension }}					
+					   <a href={{path}}><img src="../img/pdf.png" width="40" height="40px" /></a>
+					{{/if }}
+					{{#if isdoc fileextension }}					
+					    <a href={{path}}><img src="../img/doc.jpg" width="40" height="40px" /></a>
+					{{/if }}
+					{{#if isexcel fileextension }}					
+					    <a href={{path}}><img src="../img/xls.png" width="40" height="40px" /></a>
+					{{/if }}
+					
+                 </div>
+          
+</template>

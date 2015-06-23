@@ -636,7 +636,6 @@ a:after {
 }
 
 
-.eventimg
-{
-    url:('/img/eventimg.jpg');
+.label-as-badge {
+    border-radius: 1em;
 }

@@ -1,0 +1,26 @@
+<template name="questionlist">
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Questions </h1><hr>			  
+        </div>
+</div>
+
+<div class="row centered">  
+<div class="pagina">
+	<div class="row white centered">			
+				<br>
+				 {{#each questionsbysessionid}} 
+						 {{> questionItem}}
+				 {{/each}} 
+	</div>
+</div>
+</div>	  
+</template>
+
+
+<template name="questionItem">  
+       <div class="col-lg-3 centered">					
+					<h4><b><a href="">{{title}}</a></b></h4>						
+	   </div>          
+</template>
