@@ -19,3 +19,7 @@ Meteor.publish('contents', function() {
 Meteor.publish('qanswers', function() {
   return QAnswers.find();
 });
+
+Meteor.publish('polls', function() {
+  return Polls.find();
+});

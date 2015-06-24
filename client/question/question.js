@@ -7,9 +7,11 @@ Template.questionlist.helpers({
  	var sid=Router.current().params.query.SessionId;
  	    return	Questions.find();//{eventid:eid}
  },
- questiontitlebyquestionid:function(qid){ 	
- 	    return	Questions.find({_id:qid});//{eventid:eid}
+ questioncount: function(){
+ 	var sid=Router.current().params.query.SessionId;
+ 	return	Questions.find({sessionid:sid}).count();
  }
+
 });
 
 
@@ -19,7 +21,11 @@ Template.addquestion.helpers({
   getspeakerbysessionid: function(){ 	
   	var sid=Router.current().params.query.SessionId;
  	 return	Sessions.findOne({_id:sid}).speakers;//{eventid:eid}
- }
+ },
+ sessiontitle:function(){ 	
+  	var sid=Router.current().params.query.SessionId;
+ 	 return	Sessions.findOne({_id:sid}).title;
+ 	}
 });
 
 
@@ -39,8 +45,14 @@ Template.questionItem.events = {
 Template.questionanswers.helpers({ 
  answersbyquestionid: function(){
  	var qid=Router.current().params.query.Questionid;
- 	    return	QAnswers.find({questionid:qid});//{eventid:eid}
+
+ 	
+ 	    return	QAnswers.find({questionid:qid});//{questionid:qid}
  },
+ questiontitlebyquestionid: function(){
+ 	var qid=Router.current().params.query.Questionid; 	
+ 	    return	Questions.findOne({_id:qid}).title;
+ }
 
 });
 

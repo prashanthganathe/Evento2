@@ -2,7 +2,7 @@
 <div class="row white">	
 		<br/>
 		<div class="col-md-12">
-			<h1 class="centered  eventimg">Questions </h1><hr>			  
+			<h1 class="centered  eventimg">Questions ({{ questioncount}})</h1><hr>			  
         </div>
 </div>
 
@@ -21,11 +21,10 @@
 
 <template name="questionItem">  
        <div style="margin-left:300px;text-align:left;">			
-					<b><button id="questionbadge">{{title}}
-                       <span class="label label-info label-as-badge" >Answers {{getanswersbyquestionid _id}}</span>
-					</button>
-        
-					</b>	
-										 
+					<a id="questionbadge">{{title}}
+						<label class="label label-info label-as-badge" >Answers {{getanswersbyquestionid _id}}</label>
+						</a>
+					
+                       
 	   </div>          
 </template>

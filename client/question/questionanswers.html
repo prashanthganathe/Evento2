@@ -12,10 +12,10 @@
 	<div class="row white centered">			
 				<br>
 
-				<!--  <b>{{ questiontitlebyquestionid _id}}</b>
+				 <h3><span style="color:blue;">{{ questiontitlebyquestionid }}</span></h3>
 				 {{#each answersbyquestionid _id}} 
 						 {{> answerItem}}
-				 {{/each}}  -->
+				 {{/each}} 
 	</div>
 </div>
 </div>	  
@@ -23,7 +23,7 @@
 
 
 <template name="answerItem">  
-       <div style="margin-left:300px;text-align:left;">			
-					{{answer}} <br/>
+       <div style="margin-left:200px;text-align:left;">			
+					{{answer}} <hr><br/>
 	   </div>          
 </template>
