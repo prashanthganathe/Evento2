@@ -10,8 +10,8 @@
 <div class="pagina">
 	<div class="row white centered">			
 				<br>
-				 {{#each questionsbysessionid}} 
-						 {{> questionItem}}
+				 {{#each  questionsbysessionid}} 
+						{{> questionItem}}
 				 {{/each}} 
 	</div>
 </div>
@@ -20,7 +20,12 @@
 
 
 <template name="questionItem">  
-       <div class="col-lg-3 centered">					
-					<h4><b><a href="">{{title}}</a></b></h4>						
+       <div style="margin-left:300px;text-align:left;">			
+					<b><a href="#" id="questionbadge">{{title}}
+                       <span class="label label-info label-as-badge" >Answers {{getanswersbyquestionid _id}}</span>
+					</a>
+        
+					</b>	
+										 
 	   </div>          
 </template>

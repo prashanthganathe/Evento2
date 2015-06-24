@@ -2,6 +2,10 @@ Template.sessionItem.helpers({
  getquestioncountbysessionid: function(id){
  	var sid=id;//Router.current().params.query.EventId;
  	    return	Questions.find({sessionid:sid}).count();//{eventid:eid}
+ },
+ getcontentcountbysessionid: function(id){
+ 	var sid=id;//Router.current().params.query.EventId;
+ 	return	Contents.find({sessionid:sid}).count();//{eventid:eid}
  }
 });
 

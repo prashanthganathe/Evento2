@@ -1,7 +1,9 @@
 
 var questionHooks = {
   before: {
-    insert: function(doc) {     
+    insert: function(doc) {    
+        // var temp =$('#qspeakers');
+        // doc.speakers= temp;
         doc.sessionid = Router.current().params.query.SessionId;          
       return doc;
     }

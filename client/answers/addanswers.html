@@ -1,27 +1,22 @@
-<template name="addcontent">
+<template name="addanswers">
 <div class="row white">
 	
 		<br/>
 		<div class="col-md-12">
-			<h1 class="centered  eventimg">Add Content </h1><hr>
+			<h1 class="centered  eventimg">Add Answers </h1><hr>
 			  
         </div>
 </div>
 	  
-
+     {{> questiontitle}}
  	
-    {{#autoForm  collection="Contents" id="contentForm" }}
+    {{#autoForm  collection="QAnswers" id="qanswersForm" }}
 		<div class="row white ">	
  			<fieldset>
  			<div class="col-md-3" >	</div>
 			<div class="col-md-3" >	
-				<div class="col-md-12" >	
-				  {{> afQuickField name='title' class='title'}}	
-				  {{> afQuickField name='description' class='description'}}		
-				  <input type="file" class="file_bag">  	
-				  {{#each files}}
-			        <p>{{percent_uploaded}}</p>
-			    {{/each}}		 				 
+				<div class="col-md-12" >					 
+				  {{> afQuickField name='answer' class='answer'}}	
 				</div>				
 			</div>			
 			<div class="col-md-3">			
@@ -31,6 +26,7 @@
  			</fieldset>
 		</div>
     {{/autoForm}}
+    
     {{> contentlist}}
 </template>
 

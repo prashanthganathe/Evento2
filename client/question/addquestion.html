@@ -8,6 +8,10 @@
 {{#autoForm  collection="Questions" id="questionForm"  type="insert"  }}
 		<div class="row white ">	
  			<fieldset>
+ 				<div class="col-md-3" >		
+				<!-- {{> afQuickField name='starttime' type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}	
+				{{> afQuickField name='endtime'   type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}} -->
+			</div>
 			<div class="col-md-3" >	
 				<div class="col-md-12" >	
 				  {{> afQuickField name='title'}}	
@@ -15,18 +19,23 @@
 				</div>
 				
 			</div>
-			<div class="col-md-3" >		
-				<!-- {{> afQuickField name='starttime' type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}	
-				{{> afQuickField name='endtime'   type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}} -->
-			</div>
-			<div class="col-md-3">	
-				 {{> afQuickField name='speakers'}}  			
-			</div>
+		
+			
 			<div class="col-md-3">				
 				 <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success" >Create Question</button></div>	
 			</div>	
+			<div class="col-md-3">	
+				<!--  {{> afQuickField name='speakers'}}  --> 			
+				<!--  <select multiple id="qspeakers">
+				    {{#each getspeakerbysessionid}}
+				      <option value="{{this}}">{{this}}</option>
+				    {{/each}}
+				  </select> -->
+			</div>
  			</fieldset>
-
+ 
 		</div>
 		{{/autoForm}}
+
+		{{> questionlist}}
 </template>

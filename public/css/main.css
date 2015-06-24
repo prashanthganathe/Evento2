@@ -638,4 +638,5 @@ a:after {
 
 .label-as-badge {
     border-radius: 1em;
+   cursor: pointer;
 }

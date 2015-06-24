@@ -15,3 +15,7 @@ Meteor.publish('questions', function() {
 Meteor.publish('contents', function() {
   return Contents.find();
 });
+
+Meteor.publish('qanswers', function() {
+  return QAnswers.find();
+});
